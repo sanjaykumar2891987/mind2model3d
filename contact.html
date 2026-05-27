@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Mind2Model3D</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Mind<span>2</span>Model<span>3D</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn-nav">Get a Quote</a>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </div>
+    <ul class="mobile-menu" id="mobileMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-bg"><div class="blob blob1"></div><div class="blob blob2"></div><div class="grid-overlay"></div></div>
+    <div class="container">
+      <div class="section-tag">Let's Talk</div>
+      <h1>Get In <span class="accent">Touch</span></h1>
+      <p>Have a project in mind? We'd love to hear about it. We respond within 24 hours.</p>
+    </div>
+  </section>
+
+  <section class="contact-section section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <div class="contact-info">
+          <h2>We're Here to <span class="accent">Help</span></h2>
+          <p>Whether you have a ready-made design or just an idea in your head — we're the right people to talk to. No project too big or too small.</p>
+
+          <div class="info-cards">
+            <div class="info-card">
+              <div class="info-icon">📧</div>
+              <div>
+                <strong>Email Us</strong>
+                <p>sales@mind2model3d.com</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">📍</div>
+              <div>
+                <strong>Location</strong>
+                <p>Budapest, Hungary</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">⏱️</div>
+              <div>
+                <strong>Response Time</strong>
+                <p>Within 24 hours</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">🚚</div>
+              <div>
+                <strong>Shipping</strong>
+                <p>Worldwide delivery available</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-social">
+            <p>Follow our work:</p>
+            <div class="social-links">
+              <a href="#" class="social-btn">📸 Instagram</a>
+              <a href="#" class="social-btn">👍 Facebook</a>
+              <a href="#" class="social-btn">🎵 TikTok</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
+            <h3>Send Us a Message</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your Name *</label>
+                <input type="text" name="name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" name="email" placeholder="john@email.com" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>What do you need?</label>
+              <select name="service">
+                <option value="">Select a service...</option>
+                <option>Prototype / Functional Part</option>
+                <option>Miniature / Collectible</option>
+                <option>Jewelry / Accessory</option>
+                <option>Art / Home Decor</option>
+                <option>Custom Gift</option>
+                <option>Something else</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Quantity</label>
+                <input type="number" name="quantity" placeholder="1" min="1" />
+              </div>
+              <div class="form-group">
+                <label>Budget (approx.)</label>
+                <select name="budget">
+                  <option value="">Select range...</option>
+                  <option>Under €20</option>
+                  <option>€20 – €50</option>
+                  <option>€50 – €150</option>
+                  <option>€150 – €500</option>
+                  <option>€500+</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Describe Your Project *</label>
+              <textarea name="message" rows="5" placeholder="Tell us about your idea, dimensions, materials, deadlines, or anything else we should know..." required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Attach a File (optional)</label>
+              <div class="file-upload">
+                <input type="file" id="fileInput" accept=".stl,.obj,.step,.iges,.pdf,.jpg,.png" />
+                <label for="fileInput" class="file-label">📎 Click to attach STL, OBJ, STEP, image or PDF</label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-primary btn-full">Send Message & Get a Free Quote</button>
+          </form>
+
+          <div class="form-success" id="formSuccess" style="display:none">
+            <div class="success-icon">✅</div>
+            <h3>Message Sent!</h3>
+            <p>Thanks for reaching out! We'll review your project and get back to you within 24 hours with a quote.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section section alt-bg">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Questions</div>
+        <h2>Frequently <span class="accent">Asked</span></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What file formats do you accept? <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We accept STL, OBJ, STEP, IGES, and 3MF for 3D printing. If you only have a sketch or photo, we can help you create the 3D file — just mention it in your message.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How long does it take? <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Most orders are completed within 48–72 hours. Larger or more complex projects may take longer. We'll always give you a clear timeline when we send your quote.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do you ship internationally? <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! We ship worldwide. EU orders typically arrive in 3–5 business days. International orders take 7–14 days. Local pickup is also available in Budapest.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What if I don't have a 3D file? <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No problem! We offer 3D modeling as an add-on service. Share your sketch, reference image, or description and we'll create the model for you. Modeling fees start at €25.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What's your minimum order? <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>There's no minimum — we happily take single-piece orders. For bulk orders (10+ units), we offer volume discounts. Contact us for bulk pricing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Mind<span>2</span>Model<span>3D</span></a>
+        <p>Turning imagination into physical reality, one layer at a time.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Prototypes & Parts</a></li>
+          <li><a href="services.html">Miniatures</a></li>
+          <li><a href="services.html">Jewelry</a></li>
+          <li><a href="services.html">Art & Decor</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Get In Touch</h4>
+        <p>📧 sales@mind2model3d.com</p>
+        <p>📍 Budapest, Hungary</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/mind2model3d?igsh=aW1zeXJ4anBlNTdl&utm_source=qr">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Mind2Model3D. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
