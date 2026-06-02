@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services — Mind2Model3D</title>
+  <title data-i18n="srv_meta_title">Services — Mind2Model3D</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
 </head>
@@ -13,30 +13,49 @@
     <div class="nav-inner">
       <a href="index.html" class="logo">Mind<span>2</span>Model<span>3D</span></a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+        <li><a href="services.html" class="active" data-i18n="nav_services">Services</a></li>
+        <li><a href="shop.html" data-i18n="nav_shop">Shop</a></li>
+        <li><a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a></li>
+        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
       </ul>
-      <a href="contact.html" class="btn-nav">Get a Quote</a>
-      <button class="hamburger" id="hamburger">&#9776;</button>
+      <!-- Paste this Desktop Dropdown Component -->
+      <div class="lang-select-wrapper">
+        <select id="language-select" class="lang-dropdown">
+          <option value="en">EN</option>
+          <option value="hu">HU</option>
+          <option value="de">DE</option>
+          <option value="fr">FR</option>
+          <option value="es">ES</option>
+        </select>
+      </div>
+      <a href="contact.html" class="btn-nav" data-i18n="btn_quote">Get a Quote</a>
+      <button class="hamburger" id="hamburger">☰</button>
     </div>
     <ul class="mobile-menu" id="mobileMenu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <div class="mobile-lang-wrap">
+        <select id="language-select-mobile" class="lang-dropdown">
+          <option value="en">English</option>
+          <option value="hu">Magyar</option>
+          <option value="de">Deutsch</option>
+          <option value="fr">Français</option>
+          <option value="es">Español</option>
+        </select>
+      </div>
+      <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+      <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+      <li><a href="shop.html" data-i18n="nav_shop">Shop</a></li>
+      <li><a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
     </ul>
   </nav>
 
   <section class="page-hero">
     <div class="hero-bg"><div class="blob blob1"></div><div class="blob blob2"></div><div class="grid-overlay"></div></div>
     <div class="container">
-      <div class="section-tag">What We Offer</div>
-      <h1>Our <span class="accent">Services</span></h1>
-      <p>Whatever you need printed — we have the technology, materials, and expertise to make it happen.</p>
+      <div class="section-tag" data-i18n="s_hero_tag">What We Offer</div>
+      <h1 data-i18n="s_hero_title">Our <span class="accent">Services</span></h1>
+      <p data-i18n="s_hero_sub">Whatever you need printed — we have the technology, materials, and expertise to make it happen.</p>
     </div>
   </section>
 
@@ -44,41 +63,41 @@
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">Technologies</div>
-        <h2>Printing <span class="accent">Methods</span></h2>
+        <div class="section-tag" data-i18n="tech_tag">Technologies</div>
+        <h2 data-i18n="tech_title">Printing <span class="accent">Methods</span></h2>
       </div>
       <div class="tech-grid">
         <div class="tech-card">
           <div class="tech-badge" style="background:#ff6b35">FDM</div>
-          <h3>Fused Deposition Modeling</h3>
-          <p>The most versatile method. Great for functional parts, prototypes, and large objects. Available in PLA, PETG, ABS, TPU, and more.</p>
+          <h3 data-i18n="tech1_h">Fused Deposition Modeling</h3>
+          <p data-i18n="tech1_p">The most versatile method. Great for functional parts, prototypes, and large objects. Available in PLA, PETG, ABS, TPU, and more.</p>
           <ul class="tech-specs">
-            <li>✓ Large build volume</li>
-            <li>✓ Wide material range</li>
-            <li>✓ Cost-effective</li>
-            <li>✓ Fast turnaround</li>
+            <li data-i18n="tech1_l1">✓ Large build volume</li>
+            <li data-i18n="tech1_l2">✓ Wide material range</li>
+            <li data-i18n="tech1_l3">✓ Cost-effective</li>
+            <li data-i18n="tech1_l4">✓ Fast turnaround</li>
           </ul>
         </div>
         <div class="tech-card featured-tech">
           <div class="tech-badge" style="background:#7c3aed">RESIN</div>
-          <h3>Resin (MSLA/DLP)</h3>
-          <p>Ultra-high detail printing for miniatures, jewelry, and anything requiring fine features. Smooth surface finish straight off the printer.</p>
+          <h3 data-i18n="tech2_h">Resin (MSLA/DLP)</h3>
+          <p data-i18n="tech2_p">Ultra-high detail printing for miniatures, jewelry, and anything requiring fine features. Smooth surface finish straight off the printer.</p>
           <ul class="tech-specs">
-            <li>✓ Ultra-fine detail</li>
-            <li>✓ Smooth surfaces</li>
-            <li>✓ Perfect for miniatures</li>
-            <li>✓ Jewelry-grade precision</li>
+            <li data-i18n="tech2_l1">✓ Ultra-fine detail</li>
+            <li data-i18n="tech2_l2">✓ Smooth surfaces</li>
+            <li data-i18n="tech2_l3">✓ Perfect for miniatures</li>
+            <li data-i18n="tech2_l4">✓ Jewelry-grade precision</li>
           </ul>
         </div>
         <div class="tech-card">
           <div class="tech-badge" style="background:#059669">SLA</div>
-          <h3>Stereolithography</h3>
-          <p>Professional-grade prints for engineering applications, dental models, and high-accuracy prototypes requiring the best surface quality.</p>
+          <h3 data-i18n="tech3_h">Stereolithography</h3>
+          <p data-i18n="tech3_p">Professional-grade prints for engineering applications, dental models, and high-accuracy prototypes requiring the best surface quality.</p>
           <ul class="tech-specs">
-            <li>✓ Highest accuracy</li>
-            <li>✓ Engineering-grade</li>
-            <li>✓ Premium finish</li>
-            <li>✓ Wide resin library</li>
+            <li data-i18n="tech3_l1">✓ Highest accuracy</li>
+            <li data-i18n="tech3_l2">✓ Engineering-grade</li>
+            <li data-i18n="tech3_l3">✓ Premium finish</li>
+            <li data-i18n="tech3_l4">✓ Wide resin library</li>
           </ul>
         </div>
       </div>
@@ -89,99 +108,99 @@
   <section class="section alt-bg">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">Categories</div>
-        <h2>What We <span class="accent2">Print</span></h2>
+        <div class="section-tag" data-i18n="cat_tag">Categories</div>
+        <h2 data-i18n="cat_title">What We <span class="accent2">Print</span></h2>
       </div>
       <div class="service-detail-list">
 
         <div class="service-detail">
           <div class="service-detail-icon" style="--c:#ff6b35">🔩</div>
           <div class="service-detail-body">
-            <h3>Prototypes & Functional Parts</h3>
-            <p>Bring your engineering ideas to life. We print mechanical prototypes, replacement parts, jigs, fixtures, and product mockups with dimensional accuracy. Compatible with STL, OBJ, STEP, and IGES files.</p>
+            <h3 data-i18n="srv1_title">Prototypes & Functional Parts</h3>
+            <p data-i18n="srv1_page_p">Bring your engineering ideas to life. We print mechanical prototypes, replacement parts, jigs, fixtures, and product mockups with dimensional accuracy. Compatible with STL, OBJ, STEP, and IGES files.</p>
             <div class="service-tags">
               <span>PLA</span><span>PETG</span><span>ABS</span><span>Nylon</span><span>TPU</span>
             </div>
           </div>
-          <div class="service-detail-price">From <strong>€15</strong></div>
+          <div class="service-detail-price"><span data-i18n="lbl_from">From</span> <strong>€15</strong></div>
         </div>
 
         <div class="service-detail">
           <div class="service-detail-icon" style="--c:#7c3aed">🗿</div>
           <div class="service-detail-body">
-            <h3>Miniatures & Collectibles</h3>
-            <p>Tabletop RPG figures, scale models, character miniatures, and collectible statues. We print at 28mm–100mm scale with incredible detail using premium resins.</p>
+            <h3 data-i18n="srv2_title">Miniatures & Collectibles</h3>
+            <p data-i18n="srv2_page_p">Tabletop RPG figures, scale models, character miniatures, and collectible statues. We print at 28mm–100mm scale with incredible detail using premium resins.</p>
             <div class="service-tags">
               <span>Standard Resin</span><span>ABS-Like Resin</span><span>Water-Washable</span>
             </div>
           </div>
-          <div class="service-detail-price">From <strong>€8</strong></div>
+          <div class="service-detail-price"><span data-i18n="lbl_from">From</span> <strong>€8</strong></div>
         </div>
 
         <div class="service-detail">
           <div class="service-detail-icon" style="--c:#059669">💎</div>
           <div class="service-detail-body">
-            <h3>Jewelry & Accessories</h3>
-            <p>Custom rings, pendants, earrings, cufflinks, and wearable accessories. We print in castable resin for lost-wax casting, or directly in rigid/flexible materials.</p>
+            <h3 data-i18n="srv3_title">Jewelry & Accessories</h3>
+            <p data-i18n="srv3_page_p">Custom rings, pendants, earrings, cufflinks, and wearable accessories. We print in castable resin for lost-wax casting, or directly in rigid/flexible materials.</p>
             <div class="service-tags">
               <span>Castable Resin</span><span>Rigid Resin</span><span>Flexible TPU</span>
             </div>
           </div>
-          <div class="service-detail-price">From <strong>€12</strong></div>
+          <div class="service-detail-price"><span data-i18n="lbl_from">From</span> <strong>€12</strong></div>
         </div>
 
         <div class="service-detail">
           <div class="service-detail-icon" style="--c:#0284c7">🎨</div>
           <div class="service-detail-body">
-            <h3>Art, Decor & Architecture</h3>
-            <p>Sculptures, wall art, decorative vases, architectural models, and custom home decor. Available in large format for statement pieces.</p>
+            <h3 data-i18n="srv4_title">Art, Decor & Architecture</h3>
+            <p data-i18n="srv4_page_p">Sculptures, wall art, decorative vases, architectural models, and custom home decor. Available in large format for statement pieces.</p>
             <div class="service-tags">
               <span>PLA+</span><span>Wood Fill</span><span>Marble Fill</span><span>Metal Fill</span>
             </div>
           </div>
-          <div class="service-detail-price">From <strong>€20</strong></div>
+          <div class="service-detail-price"><span data-i18n="lbl_from">From</span> <strong>€20</strong></div>
         </div>
 
         <div class="service-detail">
           <div class="service-detail-icon" style="--c:#e11d48">🎁</div>
           <div class="service-detail-body">
-            <h3>Custom Gifts & Personalization</h3>
-            <p>One-of-a-kind gifts: name plaques, phone stands, desk organizers, keychains, and personalized keepsakes. Perfect for birthdays, weddings, and corporate gifting.</p>
+            <h3 data-i18n="srv5_title">Custom Gifts & Personalization</h3>
+            <p data-i18n="srv5_page_p">One-of-a-kind gifts: name plaques, phone stands, desk organizers, keychains, and personalized keepsakes. Perfect for birthdays, weddings, and corporate gifting.</p>
             <div class="service-tags">
               <span>PLA</span><span>PETG</span><span>Silk PLA</span><span>Glow-in-dark</span>
             </div>
           </div>
-          <div class="service-detail-price">From <strong>€5</strong></div>
+          <div class="service-detail-price"><span data-i18n="lbl_from">From</span> <strong>€5</strong></div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- MATERIALS -->
+<!-- MATERIALS -->
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">Materials</div>
-        <h2>Our Material <span class="accent">Library</span></h2>
-        <p>We stock over 40 materials and colors. Here are the most popular ones.</p>
+        <div class="section-tag" data-i18n="mat_tag">Materials</div>
+        <h2 data-i18n="mat_title">Our Material <span class="accent">Library</span></h2>
+        <p data-i18n="mat_sub">We stock over 40 materials and colors. Here are the most popular ones.</p>
       </div>
       <div class="materials-grid">
-        <div class="material-pill" style="background:#e8e8e8;color:#333">PLA Standard</div>
-        <div class="material-pill" style="background:#ffd700;color:#333">Silk PLA Gold</div>
-        <div class="material-pill" style="background:#c0c0c0;color:#333">Silk PLA Silver</div>
-        <div class="material-pill" style="background:#222;color:#fff">ABS Black</div>
-        <div class="material-pill" style="background:#4ade80;color:#333">PETG Green</div>
-        <div class="material-pill" style="background:#60a5fa;color:#333">PETG Blue</div>
-        <div class="material-pill" style="background:#f97316;color:#fff">TPU Orange</div>
-        <div class="material-pill" style="background:#8b5e3c;color:#fff">Wood Fill</div>
-        <div class="material-pill" style="background:#b0b0b0;color:#333">Metal Fill</div>
-        <div class="material-pill" style="background:#f1f0eb;color:#333">Marble Fill</div>
-        <div class="material-pill" style="background:#7c3aed;color:#fff">Standard Resin</div>
-        <div class="material-pill" style="background:#059669;color:#fff">ABS-Like Resin</div>
-        <div class="material-pill" style="background:#e11d48;color:#fff">Castable Resin</div>
-        <div class="material-pill" style="background:#1e293b;color:#aef">Glow in Dark</div>
-        <div class="material-pill" style="background:#f8f8f0;color:#333;border:1px solid #ddd">+ 30 more</div>
+        <div class="material-pill" style="background:#e8e8e8;color:#333" data-i18n="mat_p1">PLA Standard</div>
+        <div class="material-pill" style="background:#ffd700;color:#333" data-i18n="mat_p2">Silk PLA Gold</div>
+        <div class="material-pill" style="background:#c0c0c0;color:#333" data-i18n="mat_p3">Silk PLA Silver</div>
+        <div class="material-pill" style="background:#222;color:#fff" data-i18n="mat_p4">ABS Black</div>
+        <div class="material-pill" style="background:#4ade80;color:#333" data-i18n="mat_p5">PETG Green</div>
+        <div class="material-pill" style="background:#60a5fa;color:#333" data-i18n="mat_p6">PETG Blue</div>
+        <div class="material-pill" style="background:#f97316;color:#fff" data-i18n="mat_p7">TPU Orange</div>
+        <div class="material-pill" style="background:#8b5e3c;color:#fff" data-i18n="mat_p8">Wood Fill</div>
+        <div class="material-pill" style="background:#b0b0b0;color:#333" data-i18n="mat_p9">Metal Fill</div>
+        <div class="material-pill" style="background:#f1f0eb;color:#333" data-i18n="mat_p10">Marble Fill</div>
+        <div class="material-pill" style="background:#7c3aed;color:#fff" data-i18n="mat_p11">Standard Resin</div>
+        <div class="material-pill" style="background:#059669;color:#fff" data-i18n="mat_p12">ABS-Like Resin</div>
+        <div class="material-pill" style="background:#e11d48;color:#fff" data-i18n="mat_p13">Castable Resin</div>
+        <div class="material-pill" style="background:#1e293b;color:#aef" data-i18n="mat_p14">Glow in Dark</div>
+        <div class="material-pill" style="background:#f8f8f0;color:#333;border:1px solid #ddd" data-i18n="mat_p15">+ 30 more</div>
       </div>
     </div>
   </section>
@@ -190,9 +209,9 @@
   <section class="cta-banner">
     <div class="cta-bg"><div class="blob blob4"></div><div class="blob blob5"></div></div>
     <div class="container">
-      <h2>Not Sure What You <span class="accent">Need?</span></h2>
-      <p>Just send us your idea — we'll recommend the best material and method for your project, for free.</p>
-      <a href="contact.html" class="btn-primary btn-large">Talk to Us</a>
+      <h2 data-i18n="s_cta_title">Not Sure What You <span class="accent">Need?</span></h2>
+      <p data-i18n="s_cta_sub">Just send us your idea — we'll recommend the best material and method for your project, for free.</p>
+      <a href="contact.html" class="btn-primary btn-large" data-i18n="s_cta_btn">Talk to Us</a>
     </div>
   </section>
 
@@ -200,31 +219,31 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="index.html" class="logo">Mind<span>2</span>Model<span>3D</span></a>
-        <p>Turning imagination into physical reality, one layer at a time.</p>
+        <p data-i18n="foot_brand_sub">Turning imagination into physical reality, one layer at a time.</p>
       </div>
       <div class="footer-links">
-        <h4>Navigation</h4>
+        <h4 data-i18n="foot_h1">Navigation</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+          <li><a href="shop.html" data-i18n="nav_shop">Shop</a></li>
+          <li><a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer-links">
-        <h4>Services</h4>
+        <h4 data-i18n="foot_h2">Services</h4>
         <ul>
-          <li><a href="services.html">Prototypes & Parts</a></li>
-          <li><a href="services.html">Miniatures</a></li>
-          <li><a href="services.html">Jewelry</a></li>
-          <li><a href="services.html">Art & Decor</a></li>
+          <li><a href="services.html" data-i18n="srv1_title">Prototypes & Parts</a></li>
+          <li><a href="services.html" data-i18n="m_mini">Miniatures</a></li>
+          <li><a href="services.html" data-i18n="m_jewel">Jewelry</a></li>
+          <li><a href="services.html" data-i18n="m_art">Art & Decor</a></li>
         </ul>
       </div>
       <div class="footer-contact">
-        <h4>Get In Touch</h4>
+        <h4 data-i18n="foot_h3">Get In Touch</h4>
         <p>📧 hello@mind2model3d.com</p>
-        <p>📍 Budapest, Hungary</p>
+        <p>📍 <span data-i18n="c_card2_p">Budapest, Hungary</span></p>
         <div class="social-links">
           <a href="#">Instagram</a>
           <a href="#">Facebook</a>
@@ -233,10 +252,12 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Mind2Model3D. All rights reserved.</p>
+      <p data-i18n="foot_copy">© 2025 Mind2Model3D. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+  <!-- RUN TRANSLATION SYSTEM ENGINE -->
+  <script src="js/translate.js"></script>
 </body>
 </html>

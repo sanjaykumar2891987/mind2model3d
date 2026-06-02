@@ -1042,3 +1042,30 @@ footer {
   .testi-grid { grid-template-columns: 1fr; }
   .cart-sidebar { width: 100%; right: -100%; }
 }
+/* Language Dropdown Core Styling */
+.lang-select-wrapper {
+  display: inline-block;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+.lang-dropdown {
+  background: #1a1a1a;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  outline: none;
+  font-size: 14px;
+}
+.lang-dropdown:focus {
+  border-color: #7c3aed; /* Your primary purple accent focus color */
+}
+@media (max-width: 768px) {
+  .mobile-lang-wrap {
+    padding: 15px;
+    border-bottom: 1px solid #222;
+    text-align: center;
+  }
+}

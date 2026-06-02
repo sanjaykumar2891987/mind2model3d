@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop — Mind2Model3D</title>
+  <title data-i18n="shop_meta_title">Shop — Mind2Model3D</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
 </head>
@@ -13,30 +13,49 @@
     <div class="nav-inner">
       <a href="index.html" class="logo">Mind<span>2</span>Model<span>3D</span></a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="shop.html" class="active">Shop</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+        <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+        <li><a href="shop.html" class="active" data-i18n="nav_shop">Shop</a></li>
+        <li><a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a></li>
+        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
       </ul>
-      <a href="contact.html" class="btn-nav">Get a Quote</a>
-      <button class="hamburger" id="hamburger">&#9776;</button>
+      <!-- Paste this Desktop Dropdown Component -->
+      <div class="lang-select-wrapper">
+        <select id="language-select" class="lang-dropdown">
+          <option value="en">EN</option>
+          <option value="hu">HU</option>
+          <option value="de">DE</option>
+          <option value="fr">FR</option>
+          <option value="es">ES</option>
+        </select>
+      </div>
+      <a href="contact.html" class="btn-nav" data-i18n="btn_quote">Get a Quote</a>
+      <button class="hamburger" id="hamburger">☰</button>
     </div>
     <ul class="mobile-menu" id="mobileMenu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <div class="mobile-lang-wrap">
+        <select id="language-select-mobile" class="lang-dropdown">
+          <option value="en">English</option>
+          <option value="hu">Magyar</option>
+          <option value="de">Deutsch</option>
+          <option value="fr">Français</option>
+          <option value="es">Español</option>
+        </select>
+      </div>
+      <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+      <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+      <li><a href="shop.html" data-i18n="nav_shop">Shop</a></li>
+      <li><a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
     </ul>
   </nav>
 
   <section class="page-hero">
     <div class="hero-bg"><div class="blob blob1"></div><div class="blob blob2"></div><div class="grid-overlay"></div></div>
     <div class="container">
-      <div class="section-tag">Ready to Ship</div>
-      <h1>The <span class="accent">Shop</span></h1>
-      <p>Browse our ready-made prints. Order now and we'll ship within 48 hours.</p>
+      <div class="section-tag" data-i18n="sh_hero_tag">Ready to Ship</div>
+      <h1 data-i18n="sh_hero_title">The <span class="accent">Shop</span></h1>
+      <p data-i18n="sh_hero_sub">Browse our ready-made prints. Order now and we'll ship within 48 hours.</p>
     </div>
   </section>
 
@@ -44,12 +63,12 @@
   <section class="shop-section section">
     <div class="container">
       <div class="shop-filters">
-        <button class="filter-btn active" data-filter="all">All Products</button>
-        <button class="filter-btn" data-filter="decor">Home Decor</button>
-        <button class="filter-btn" data-filter="miniature">Miniatures</button>
-        <button class="filter-btn" data-filter="jewelry">Jewelry</button>
-        <button class="filter-btn" data-filter="functional">Functional</button>
-        <button class="filter-btn" data-filter="gift">Gifts</button>
+        <button class="filter-btn active" data-filter="all" data-i18n="sh_flt_all">All Products</button>
+        <button class="filter-btn" data-filter="decor" data-i18n="flt_art">Home Decor</button>
+        <button class="filter-btn" data-filter="miniature" data-i18n="flt_mini">Miniatures</button>
+        <button class="filter-btn" data-filter="jewelry" data-i18n="flt_jewel">Jewelry</button>
+        <button class="filter-btn" data-filter="functional" data-i18n="sh_flt_func">Functional</button>
+        <button class="filter-btn" data-filter="gift" data-i18n="flt_gift">Gifts</button>
       </div>
 
       <div class="shop-grid" id="shopGrid">
@@ -57,15 +76,15 @@
         <div class="product-card" data-cat="decor">
           <div class="product-img" style="--c:#ff6b35">
             <div class="prod-placeholder">⬡</div>
-            <div class="product-badge">New</div>
+            <div class="product-badge" data-i18n="sh_bdg_new">New</div>
           </div>
           <div class="product-info">
-            <div class="product-cat">Home Decor</div>
-            <h3>Geometric Vase</h3>
-            <p>Low-poly vase in marble fill PLA. Perfect for dried flowers.</p>
+            <div class="product-cat" data-i18n="flt_art">Home Decor</div>
+            <h3 data-i18n="sh_p1_h">Geometric Vase</h3>
+            <p data-i18n="sh_p1_p">Low-poly vase in marble fill PLA. Perfect for dried flowers.</p>
             <div class="product-bottom">
               <span class="price">€24.90</span>
-              <button class="btn-add" onclick="addToCart(this, 'Geometric Vase', 24.90)">Add to Cart</button>
+              <button class="btn-add" onclick="addToCart(this, 'Geometric Vase', 24.90)" data-i18n="sh_btn_cart">Add to Cart</button>
             </div>
           </div>
         </div>
@@ -75,12 +94,12 @@
             <div class="prod-placeholder">⬡</div>
           </div>
           <div class="product-info">
-            <div class="product-cat">Miniature</div>
-            <h3>Dragon Miniature</h3>
-            <p>28mm scale, resin printed with ultra-fine detail. Pre-primed.</p>
+            <div class="product-cat" data-i18n="flt_mini">Miniature</div>
+            <h3 data-i18n="sh_p2_h">Dragon Miniature</h3>
+            <p data-i18n="sh_p2_p">28mm scale, resin printed with ultra-fine detail. Pre-primed.</p>
             <div class="product-bottom">
               <span class="price">€12.50</span>
-              <button class="btn-add" onclick="addToCart(this, 'Dragon Miniature', 12.50)">Add to Cart</button>
+              <button class="btn-add" onclick="addToCart(this, 'Dragon Miniature', 12.50)" data-i18n="sh_btn_cart">Add to Cart</button>
             </div>
           </div>
         </div>
@@ -88,15 +107,15 @@
         <div class="product-card" data-cat="jewelry">
           <div class="product-img" style="--c:#059669">
             <div class="prod-placeholder">⬡</div>
-            <div class="product-badge" style="background:#059669">Popular</div>
+            <div class="product-badge" style="background:#059669" data-i18n="sh_bdg_pop">Popular</div>
           </div>
           <div class="product-info">
-            <div class="product-cat">Jewelry</div>
-            <h3>Geometric Ring</h3>
-            <p>Custom-sized geometric ring in rigid white resin. Unique design.</p>
+            <div class="product-cat" data-i18n="flt_jewel">Jewelry</div>
+            <h3 data-i18n="sh_p3_h">Geometric Ring</h3>
+            <p data-i18n="sh_p3_p">Custom-sized geometric ring in rigid white resin. Unique design.</p>
             <div class="product-bottom">
               <span class="price">€18.00</span>
-              <button class="btn-add" onclick="addToCart(this, 'Geometric Ring', 18.00)">Add to Cart</button>
+              <button class="btn-add" onclick="addToCart(this, 'Geometric Ring', 18.00)" data-i18n="sh_btn_cart">Add to Cart</button>
             </div>
           </div>
         </div>
@@ -106,12 +125,12 @@
             <div class="prod-placeholder">⬡</div>
           </div>
           <div class="product-info">
-            <div class="product-cat">Functional</div>
-            <h3>Cable Management Clips</h3>
-            <p>Set of 10 desk cable organizer clips. Adhesive-ready backing.</p>
+            <div class="product-cat" data-i18n="sh_flt_func">Functional</div>
+            <h3 data-i18n="sh_p4_h">Cable Management Clips</h3>
+            <p data-i18n="sh_p4_p">Set of 10 desk cable organizer clips. Adhesive-ready backing.</p>
             <div class="product-bottom">
               <span class="price">€9.90</span>
-              <button class="btn-add" onclick="addToCart(this, 'Cable Clips x10', 9.90)">Add to Cart</button>
+              <button class="btn-add" onclick="addToCart(this, 'Cable Clips x10', 9.90)" data-i18n="sh_btn_cart">Add to Cart</button>
             </div>
           </div>
         </div>
@@ -121,12 +140,12 @@
             <div class="prod-placeholder">⬡</div>
           </div>
           <div class="product-info">
-            <div class="product-cat">Gift</div>
-            <h3>Custom Name Keychain</h3>
-            <p>Personalized name keychain in your choice of color. Ships in 24h.</p>
+            <div class="product-cat" data-i18n="flt_gift">Gift</div>
+            <h3 data-i18n="sh_p5_h">Custom Name Keychain</h3>
+            <p data-i18n="sh_p5_p">Personalized name keychain in your choice of color. Ships in 24h.</p>
             <div class="product-bottom">
               <span class="price">€7.50</span>
-              <button class="btn-add" onclick="addToCart(this, 'Name Keychain', 7.50)">Add to Cart</button>
+              <button class="btn-add" onclick="addToCart(this, 'Name Keychain', 7.50)" data-i18n="sh_btn_cart">Add to Cart</button>
             </div>
           </div>
         </div>
@@ -136,12 +155,12 @@
             <div class="prod-placeholder">⬡</div>
           </div>
           <div class="product-info">
-            <div class="product-cat">Home Decor</div>
-            <h3>Hexagon Wall Tiles</h3>
-            <p>Set of 6 geometric wall tiles. Mix & match patterns and colors.</p>
+            <div class="product-cat" data-i18n="flt_art">Home Decor</div>
+            <h3 data-i18n="sh_p6_h">Hexagon Wall Tiles</h3>
+            <p data-i18n="sh_p6_p">Set of 6 geometric wall tiles. Mix & match patterns and colors.</p>
             <div class="product-bottom">
               <span class="price">€34.00</span>
-              <button class="btn-add" onclick="addToCart(this, 'Hex Wall Tiles x6', 34.00)">Add to Cart</button>
+              <button class="btn-add" onclick="addToCart(this, 'Hex Wall Tiles x6', 34.00)" data-i18n="sh_btn_cart">Add to Cart</button>
             </div>
           </div>
         </div>
@@ -151,12 +170,12 @@
             <div class="prod-placeholder">⬡</div>
           </div>
           <div class="product-info">
-            <div class="product-cat">Miniature</div>
-            <h3>Chess Set</h3>
-            <p>Full 32-piece chess set in resin. Elegant modern design.</p>
+            <div class="product-cat" data-i18n="flt_mini">Miniature</div>
+            <h3 data-i18n="sh_p7_h">Chess Set</h3>
+            <p data-i18n="sh_p7_p">Full 32-piece chess set in resin. Elegant modern design.</p>
             <div class="product-bottom">
               <span class="price">€65.00</span>
-              <button class="btn-add" onclick="addToCart(this, 'Chess Set', 65.00)">Add to Cart</button>
+              <button class="btn-add" onclick="addToCart(this, 'Chess Set', 65.00)" data-i18n="sh_btn_cart">Add to Cart</button>
             </div>
           </div>
         </div>
@@ -164,15 +183,15 @@
         <div class="product-card" data-cat="functional">
           <div class="product-img" style="--c:#14b8a6">
             <div class="prod-placeholder">⬡</div>
-            <div class="product-badge" style="background:#14b8a6">Best Seller</div>
+            <div class="product-badge" style="background:#14b8a6" data-i18n="sh_bdg_best">Best Seller</div>
           </div>
           <div class="product-info">
-            <div class="product-cat">Functional</div>
-            <h3>Phone Stand</h3>
-            <p>Adjustable angle desk phone stand. Fits all phone sizes.</p>
+            <div class="product-cat" data-i18n="sh_flt_func">Functional</div>
+            <h3 data-i18n="sh_p8_h">Phone Stand</h3>
+            <p data-i18n="sh_p8_p">Adjustable angle desk phone stand. Fits all phone sizes.</p>
             <div class="product-bottom">
               <span class="price">€14.90</span>
-              <button class="btn-add" onclick="addToCart(this, 'Phone Stand', 14.90)">Add to Cart</button>
+              <button class="btn-add" onclick="addToCart(this, 'Phone Stand', 14.90)" data-i18n="sh_btn_cart">Add to Cart</button>
             </div>
           </div>
         </div>
@@ -181,19 +200,19 @@
     </div>
   </section>
 
-  <!-- CART SIDEBAR -->
+<!-- CART SIDEBAR -->
   <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
   <div class="cart-sidebar" id="cartSidebar">
     <div class="cart-header">
-      <h3>Your Cart <span id="cartCount" class="cart-count">0</span></h3>
+      <h3><span data-i18n="sh_cart_title">Your Cart</span> <span id="cartCount" class="cart-count">0</span></h3>
       <button onclick="toggleCart()" class="cart-close">✕</button>
     </div>
     <div class="cart-items" id="cartItems">
-      <div class="cart-empty">Your cart is empty.<br>Add some products!</div>
+      <div class="cart-empty" data-i18n="sh_cart_empty">Your cart is empty.<br>Add some products!</div>
     </div>
     <div class="cart-footer">
-      <div class="cart-total">Total: <strong id="cartTotal">€0.00</strong></div>
-      <a href="contact.html" class="btn-primary" style="width:100%;text-align:center;display:block">Proceed to Order</a>
+      <div class="cart-total"><span data-i18n="sh_cart_total">Total:</span> <strong id="cartTotal">€0.00</strong></div>
+      <a href="contact.html" class="btn-primary" style="width:100%;text-align:center;display:block" data-i18n="sh_cart_checkout">Proceed to Order</a>
     </div>
   </div>
 
@@ -206,9 +225,9 @@
   <section class="cta-banner">
     <div class="cta-bg"><div class="blob blob4"></div><div class="blob blob5"></div></div>
     <div class="container">
-      <h2>Don't See What You <span class="accent">Need?</span></h2>
-      <p>We do fully custom orders too. Send us your design and we'll make it happen.</p>
-      <a href="contact.html" class="btn-primary btn-large">Request Custom Print</a>
+      <h2 data-i18n="sh_cta_title">Don't See What You <span class="accent">Need?</span></h2>
+      <p data-i18n="sh_cta_sub">We do fully custom orders too. Send us your design and we'll make it happen.</p>
+      <a href="contact.html" class="btn-primary btn-large" data-i18n="sh_cta_btn">Request Custom Print</a>
     </div>
   </section>
 
@@ -216,31 +235,31 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="index.html" class="logo">Mind<span>2</span>Model<span>3D</span></a>
-        <p>Turning imagination into physical reality, one layer at a time.</p>
+        <p data-i18n="foot_brand_sub">Turning imagination into physical reality, one layer at a time.</p>
       </div>
       <div class="footer-links">
-        <h4>Navigation</h4>
+        <h4 data-i18n="foot_h1">Navigation</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+          <li><a href="shop.html" data-i18n="nav_shop">Shop</a></li>
+          <li><a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer-links">
-        <h4>Services</h4>
+        <h4 data-i18n="foot_h2">Services</h4>
         <ul>
-          <li><a href="services.html">Prototypes & Parts</a></li>
-          <li><a href="services.html">Miniatures</a></li>
-          <li><a href="services.html">Jewelry</a></li>
-          <li><a href="services.html">Art & Decor</a></li>
+          <li><a href="services.html" data-i18n="srv1_title">Prototypes & Parts</a></li>
+          <li><a href="services.html" data-i18n="m_mini">Miniatures</a></li>
+          <li><a href="services.html" data-i18n="m_jewel">Jewelry</a></li>
+          <li><a href="services.html" data-i18n="m_art">Art & Decor</a></li>
         </ul>
       </div>
       <div class="footer-contact">
-        <h4>Get In Touch</h4>
+        <h4 data-i18n="foot_h3">Get In Touch</h4>
         <p>📧 hello@mind2model3d.com</p>
-        <p>📍 Budapest, Hungary</p>
+        <p>📍 <span data-i18n="c_card2_p">Budapest, Hungary</span></p>
         <div class="social-links">
           <a href="#">Instagram</a>
           <a href="#">Facebook</a>
@@ -249,11 +268,14 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Mind2Model3D. All rights reserved.</p>
+      <p data-i18n="foot_copy">© 2025 Mind2Model3D. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
   <script src="js/shop.js"></script>
+  <!-- RUN TRANSLATION SYSTEM ENGINE -->
+  <script src="js/translate.js"></script>
 </body>
 </html>
+

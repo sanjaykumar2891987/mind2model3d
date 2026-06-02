@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — Mind2Model3D</title>
+  <title data-i18n="contact_meta_title">Contact — Mind2Model3D</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
 </head>
@@ -13,74 +13,101 @@
     <div class="nav-inner">
       <a href="index.html" class="logo">Mind<span>2</span>Model<span>3D</span></a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+        <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+        <li><a href="shop.html" data-i18n="nav_shop">Shop</a></li>
+        <li><a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a></li>
+        <li><a href="contact.html" class="active" data-i18n="nav_contact">Contact</a></li>
       </ul>
-      <a href="contact.html" class="btn-nav">Get a Quote</a>
-      <button class="hamburger" id="hamburger">&#9776;</button>
+              <!-- Paste this Desktop Dropdown Component -->
+      <div class="lang-select-wrapper">
+        <select id="language-select" class="lang-dropdown">
+          <option value="en">EN</option>
+          <option value="hu">HU</option>
+          <option value="de">DE</option>
+          <option value="fr">FR</option>
+          <option value="es">ES</option>
+        </select>
+      </div>
+      <a href="contact.html" class="btn-nav" data-i18n="btn_quote">Get a Quote</a>
+      <button class="hamburger" id="hamburger">☰</button>
     </div>
     <ul class="mobile-menu" id="mobileMenu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <div class="mobile-lang-wrap">
+        <select id="language-select-mobile" class="lang-dropdown">
+          <option value="en">English</option>
+          <option value="hu">Magyar</option>
+          <option value="de">Deutsch</option>
+          <option value="fr">Français</option>
+          <option value="es">Español</option>
+        </select>
+      </div>
+      <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+      <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+      <li><a href="shop.html" data-i18n="nav_shop">Shop</a></li>
+      <li><a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
     </ul>
   </nav>
 
-  <section class="page-hero">
-    <div class="hero-bg"><div class="blob blob1"></div><div class="blob blob2"></div><div class="grid-overlay"></div></div>
-    <div class="container">
-      <div class="section-tag">Let's Talk</div>
-      <h1>Get In <span class="accent">Touch</span></h1>
-      <p>Have a project in mind? We'd love to hear about it. We respond within 24 hours.</p>
-    </div>
-  </section>
+ <section class="page-hero">
+  <div class="hero-bg"><div class="blob blob1"></div><div class="blob blob2"></div><div class="grid-overlay"></div></div>
+  <div class="container">
+    <div class="section-tag" data-i18n="c_hero_tag">Let's Talk</div>
+    <h1>
+      <span data-i18n="c_hero_title_p1">Get In </span><span class="accent" data-i18n="c_hero_title_p2">Touch</span>
+    </h1>
+    <p data-i18n="c_hero_sub">Have a project in mind? We'd love to hear about it. We respond within 24 hours.</p>
+  </div>
+</section>
+
 
   <section class="contact-section section">
     <div class="container">
       <div class="contact-layout">
 
-        <div class="contact-info">
-          <h2>We're Here to <span class="accent">Help</span></h2>
-          <p>Whether you have a ready-made design or just an idea in your head — we're the right people to talk to. No project too big or too small.</p>
+<div class="contact-info">
+  <!-- FIX: Split text to save the inner accent span -->
+  <h2>
+    <span data-i18n="c_info_title_p1">We're Here to</span>
+    <span class="accent" data-i18n="c_info_title_p2">Help</span>
+  </h2>
+  <p data-i18n="c_info_sub">Whether you have a ready-made design or just an idea in your head — we're the right people to talk to. No project too big or too small.</p>
 
-          <div class="info-cards">
-            <div class="info-card">
-              <div class="info-icon">📧</div>
-              <div>
-                <strong>Email Us</strong>
-                <p>sales@mind2model3d.com</p>
-              </div>
-            </div>
-            <div class="info-card">
-              <div class="info-icon">📍</div>
-              <div>
-                <strong>Location</strong>
-                <p>Budapest, Hungary</p>
-              </div>
-            </div>
-            <div class="info-card">
-              <div class="info-icon">⏱️</div>
-              <div>
-                <strong>Response Time</strong>
-                <p>Within 24 hours</p>
-              </div>
-            </div>
-            <div class="info-card">
-              <div class="info-icon">🚚</div>
-              <div>
-                <strong>Shipping</strong>
-                <p>Worldwide delivery available</p>
-              </div>
-            </div>
-          </div>
+  <div class="info-cards">
+    <div class="info-card">
+      <div class="info-icon">📧</div>
+      <div>
+        <strong data-i18n="c_card1_h">Email Us</strong>
+        <p>sales@mind2model3d.com</p>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">📍</div>
+      <div>
+        <strong data-i18n="c_card2_h">Location</strong>
+        <p data-i18n="c_card2_p">Budapest, Hungary</p>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">⏱️</div>
+      <div>
+        <strong data-i18n="c_card3_h">Response Time</strong>
+        <p data-i18n="c_card3_p">Within 24 hours</p>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">🚚</div>
+      <div>
+        <strong data-i18n="c_card4_h">Shipping</strong>
+        <p data-i18n="c_card4_p">Worldwide delivery available</p>
+      </div>
+    </div>
+  </div>
+
 
           <div class="contact-social">
-            <p>Follow our work:</p>
+            <p data-i18n="c_social_lbl">Follow our work:</p>
             <div class="social-links">
               <a href="#" class="social-btn">📸 Instagram</a>
               <a href="#" class="social-btn">👍 Facebook</a>
@@ -91,70 +118,69 @@
 
         <div class="contact-form-wrap">
           <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
-            <h3>Send Us a Message</h3>
+            <h3 data-i18n="c_form_title">Send Us a Message</h3>
 
             <div class="form-row">
               <div class="form-group">
-                <label>Your Name *</label>
-                <input type="text" name="name" placeholder="John Doe" required />
+                <label data-i18n="c_f_name">Your Name *</label>
+                <input type="text" name="name" data-i18n="c_f_name_ph" placeholder="John Doe" required />
               </div>
               <div class="form-group">
-                <label>Email Address *</label>
-                <input type="email" name="email" placeholder="john@email.com" required />
+                <label data-i18n="c_f_email">Email Address *</label>
+                <input type="email" name="email" data-i18n="c_f_email_ph" placeholder="john@email.com" required />
               </div>
             </div>
 
             <div class="form-group">
-              <label>What do you need?</label>
+              <label data-i18n="c_f_service">What do you need?</label>
               <select name="service">
-                <option value="">Select a service...</option>
-                <option>Prototype / Functional Part</option>
-                <option>Miniature / Collectible</option>
-                <option>Jewelry / Accessory</option>
-                <option>Art / Home Decor</option>
-                <option>Custom Gift</option>
-                <option>Something else</option>
+                <option value="" data-i18n="c_f_srv_opt0">Select a service...</option>
+                <option data-i18n="c_f_srv_opt1">Prototype / Functional Part</option>
+                <option data-i18n="c_f_srv_opt2">Miniature / Collectible</option>
+                <option data-i18n="c_f_srv_opt3">Jewelry / Accessory</option>
+                <option data-i18n="c_f_srv_opt4">Art / Home Decor</option>
+                <option data-i18n="c_f_srv_opt5">Custom Gift</option>
+                <option data-i18n="c_f_srv_opt6">Something else</option>
               </select>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label>Quantity</label>
+                <label data-i18n="c_f_qty">Quantity</label>
                 <input type="number" name="quantity" placeholder="1" min="1" />
               </div>
               <div class="form-group">
-                <label>Budget (approx.)</label>
+                <label data-i18n="c_f_budget">Budget (approx.)</label>
                 <select name="budget">
-                  <option value="">Select range...</option>
-                  <option>Under €20</option>
+                  <option value="" data-i18n="c_f_bud_opt0">Select range...</option>
+                  <option data-i18n="c_f_bud_opt1">Under €20</option>
                   <option>€20 – €50</option>
                   <option>€50 – €150</option>
                   <option>€150 – €500</option>
-                  <option>€500+</option>
+                  <option data-i18n="c_f_bud_opt5">€500+</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label>Describe Your Project *</label>
-              <textarea name="message" rows="5" placeholder="Tell us about your idea, dimensions, materials, deadlines, or anything else we should know..." required></textarea>
+              <label data-i18n="c_f_msg">Describe Your Project *</label>
+              <textarea name="message" rows="5" data-i18n="c_f_msg_ph" placeholder="Tell us about your idea, dimensions, materials, deadlines, or anything else we should know..." required></textarea>
             </div>
 
             <div class="form-group">
-              <label>Attach a File (optional)</label>
+              <label data-i18n="c_f_file">Attach a File (optional)</label>
               <div class="file-upload">
                 <input type="file" id="fileInput" accept=".stl,.obj,.step,.iges,.pdf,.jpg,.png" />
-                <label for="fileInput" class="file-label">📎 Click to attach STL, OBJ, STEP, image or PDF</label>
+                <label for="fileInput" class="file-label" data-i18n="c_f_file_lbl">📎 Click to attach STL, OBJ, STEP, image or PDF</label>
               </div>
             </div>
-
-            <button type="submit" class="btn-primary btn-full">Send Message & Get a Free Quote</button>
+            <button type="submit" class="btn-primary btn-full" data-i18n="c_f_submit">Send Message & Get a Free Quote</button>
           </form>
 
           <div class="form-success" id="formSuccess" style="display:none">
             <div class="success-icon">✅</div>
-            <h3>Message Sent!</h3>
-            <p>Thanks for reaching out! We'll review your project and get back to you within 24 hours with a quote.</p>
+            <h3 data-i18n="c_succ_title">Message Sent!</h3>
+            <p data-i18n="c_succ_desc">Thanks for reaching out! We'll review your project and get back to you within 24 hours with a quote.</p>
           </div>
         </div>
 
@@ -166,48 +192,48 @@
   <section class="faq-section section alt-bg">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">Questions</div>
-        <h2>Frequently <span class="accent">Asked</span></h2>
+        <div class="section-tag" data-i18n="faq_tag">Questions</div>
+        <h2 data-i18n="faq_title">Frequently <span class="accent">Asked</span></h2>
       </div>
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            What file formats do you accept? <span class="faq-arrow">+</span>
+            <span data-i18n="faq1_q">What file formats do you accept?</span> <span class="faq-arrow">+</span>
           </button>
           <div class="faq-answer">
-            <p>We accept STL, OBJ, STEP, IGES, and 3MF for 3D printing. If you only have a sketch or photo, we can help you create the 3D file — just mention it in your message.</p>
+            <p data-i18n="faq1_a">We accept STL, OBJ, STEP, IGES, and 3MF for 3D printing. If you only have a sketch or photo, we can help you create the 3D file — just mention it in your message.</p>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            How long does it take? <span class="faq-arrow">+</span>
+            <span data-i18n="faq2_q">How long does it take?</span> <span class="faq-arrow">+</span>
           </button>
           <div class="faq-answer">
-            <p>Most orders are completed within 48–72 hours. Larger or more complex projects may take longer. We'll always give you a clear timeline when we send your quote.</p>
+            <p data-i18n="faq2_a">Most orders are completed within 48–72 hours. Larger or more complex projects may take longer. We'll always give you a clear timeline when we send your quote.</p>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            Do you ship internationally? <span class="faq-arrow">+</span>
+            <span data-i18n="faq3_q">Do you ship internationally?</span> <span class="faq-arrow">+</span>
           </button>
           <div class="faq-answer">
-            <p>Yes! We ship worldwide. EU orders typically arrive in 3–5 business days. International orders take 7–14 days. Local pickup is also available in Budapest.</p>
+            <p data-i18n="faq3_a">Yes! We ship worldwide. EU orders typically arrive in 3–5 business days. International orders take 7–14 days. Local pickup is also available in Budapest.</p>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            What if I don't have a 3D file? <span class="faq-arrow">+</span>
+            <span data-i18n="faq4_q">What if I don't have a 3D file?</span> <span class="faq-arrow">+</span>
           </button>
           <div class="faq-answer">
-            <p>No problem! We offer 3D modeling as an add-on service. Share your sketch, reference image, or description and we'll create the model for you. Modeling fees start at €25.</p>
+            <p data-i18n="faq4_a">No problem! We offer 3D modeling as an add-on service. Share your sketch, reference image, or description and we'll create the model for you. Modeling fees start at €25.</p>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            What's your minimum order? <span class="faq-arrow">+</span>
+            <span data-i18n="faq5_q">What's your minimum order?</span> <span class="faq-arrow">+</span>
           </button>
           <div class="faq-answer">
-            <p>There's no minimum — we happily take single-piece orders. For bulk orders (10+ units), we offer volume discounts. Contact us for bulk pricing.</p>
+            <p data-i18n="faq5_a">There's no minimum — we happily take single-piece orders. For bulk orders (10+ units), we offer volume discounts. Contact us for bulk pricing.</p>
           </div>
         </div>
       </div>
@@ -218,31 +244,31 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="index.html" class="logo">Mind<span>2</span>Model<span>3D</span></a>
-        <p>Turning imagination into physical reality, one layer at a time.</p>
+        <p data-i18n="f_brand_desc">Turning imagination into physical reality, one layer at a time.</p>
       </div>
       <div class="footer-links">
-        <h4>Navigation</h4>
+        <h4 data-i18n="f_nav_title">Navigation</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+          <li><a href="shop.html" data-i18n="nav_shop">Shop</a></li>
+          <li><a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer-links">
-        <h4>Services</h4>
+        <h4 data-i18n="f_srv_title">Services</h4>
         <ul>
-          <li><a href="services.html">Prototypes & Parts</a></li>
-          <li><a href="services.html">Miniatures</a></li>
-          <li><a href="services.html">Jewelry</a></li>
-          <li><a href="services.html">Art & Decor</a></li>
+          <li><a href="services.html" data-i18n="srv1_title">Prototypes & Parts</a></li>
+          <li><a href="services.html" data-i18n="m_mini">Miniatures</a></li>
+          <li><a href="services.html" data-i18n="m_jewel">Jewelry</a></li>
+          <li><a href="services.html" data-i18n="m_art">Art & Decor</a></li>
         </ul>
       </div>
       <div class="footer-contact">
-        <h4>Get In Touch</h4>
+        <h4 data-i18n="f_cnt_title">Get In Touch</h4>
         <p>📧 sales@mind2model3d.com</p>
-        <p>📍 Budapest, Hungary</p>
+        <p><span class="flag-icon">📍</span> <span data-i18n="c_card2_p">Budapest, Hungary</span></p>
         <div class="social-links">
           <a href="https://www.instagram.com/mind2model3d?igsh=aW1zeXJ4anBlNTdl&utm_source=qr">Instagram</a>
           <a href="#">Facebook</a>
@@ -251,11 +277,12 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Mind2Model3D. All rights reserved.</p>
+      <p data-i18n="f_copyright">© 2025 Mind2Model3D. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
   <script src="js/contact.js"></script>
+  <script src="js/translate.js"></script>
 </body>
 </html>
