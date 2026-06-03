@@ -117,65 +117,73 @@
         </div>
 
         <div class="contact-form-wrap">
-          <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
-            <h3 data-i18n="c_form_title">Send Us a Message</h3>
+           <form class="contact-form" id="contactForm" action="https://formsubmit.co" method="POST" enctype="multipart/form-data">
 
-            <div class="form-row">
-              <div class="form-group">
-                <label data-i18n="c_f_name">Your Name *</label>
-                <input type="text" name="name" data-i18n="c_f_name_ph" placeholder="John Doe" required />
-              </div>
-              <div class="form-group">
-                <label data-i18n="c_f_email">Email Address *</label>
-                <input type="email" name="email" data-i18n="c_f_email_ph" placeholder="john@email.com" required />
-              </div>
-            </div>
+             <!-- FormSubmit Hidden Settings Configuration -->
+             <input type="hidden" name="_subject" value="New 3D Printing Quote Request!">
+             <input type="hidden" name="_captcha" value="false">
 
-            <div class="form-group">
-              <label data-i18n="c_f_service">What do you need?</label>
-              <select name="service">
-                <option value="" data-i18n="c_f_srv_opt0">Select a service...</option>
-                <option data-i18n="c_f_srv_opt1">Prototype / Functional Part</option>
-                <option data-i18n="c_f_srv_opt2">Miniature / Collectible</option>
-                <option data-i18n="c_f_srv_opt3">Jewelry / Accessory</option>
-                <option data-i18n="c_f_srv_opt4">Art / Home Decor</option>
-                <option data-i18n="c_f_srv_opt5">Custom Gift</option>
-                <option data-i18n="c_f_srv_opt6">Something else</option>
-              </select>
-            </div>
+             <h3 data-i18n="c_form_title">Send Us a Message</h3>
 
-            <div class="form-row">
-              <div class="form-group">
-                <label data-i18n="c_f_qty">Quantity</label>
-                <input type="number" name="quantity" placeholder="1" min="1" />
-              </div>
-              <div class="form-group">
-                <label data-i18n="c_f_budget">Budget (approx.)</label>
-                <select name="budget">
-                  <option value="" data-i18n="c_f_bud_opt0">Select range...</option>
-                  <option data-i18n="c_f_bud_opt1">Under €20</option>
-                  <option>€20 – €50</option>
-                  <option>€50 – €150</option>
-                  <option>€150 – €500</option>
-                  <option data-i18n="c_f_bud_opt5">€500+</option>
-                </select>
-              </div>
-            </div>
+             <div class="form-row">
+               <div class="form-group">
+                 <label data-i18n="c_f_name">Your Name *</label>
+                 <input type="text" name="name" data-i18n="c_f_name_ph" placeholder="John Doe" required />
+               </div>
+               <div class="form-group">
+                 <label data-i18n="c_f_email">Email Address *</label>
+                 <input type="email" name="email" data-i18n="c_f_email_ph" placeholder="john@email.com" required />
+               </div>
+             </div>
 
-            <div class="form-group">
-              <label data-i18n="c_f_msg">Describe Your Project *</label>
-              <textarea name="message" rows="5" data-i18n="c_f_msg_ph" placeholder="Tell us about your idea, dimensions, materials, deadlines, or anything else we should know..." required></textarea>
-            </div>
+             <div class="form-group">
+               <label data-i18n="c_f_service">What do you need?</label>
+               <select name="service">
+                 <option value="" data-i18n="c_f_srv_opt0">Select a service...</option>
+                 <option data-i18n="c_f_srv_opt1">Prototype / Functional Part</option>
+                 <option data-i18n="c_f_srv_opt2">Miniature / Collectible</option>
+                 <option data-i18n="c_f_srv_opt3">Jewelry / Accessory</option>
+                 <option data-i18n="c_f_srv_opt4">Art / Home Decor</option>
+                 <option data-i18n="c_f_srv_opt5">Custom Gift</option>
+                 <option data-i18n="c_f_srv_opt6">Something else</option>
+               </select>
+             </div>
 
-            <div class="form-group">
-              <label data-i18n="c_f_file">Attach a File (optional)</label>
-              <div class="file-upload">
-                <input type="file" id="fileInput" accept=".stl,.obj,.step,.iges,.pdf,.jpg,.png" />
-                <label for="fileInput" class="file-label" data-i18n="c_f_file_lbl">📎 Click to attach STL, OBJ, STEP, image or PDF</label>
-              </div>
-            </div>
-            <button type="submit" class="btn-primary btn-full" data-i18n="c_f_submit">Send Message & Get a Free Quote</button>
-          </form>
+             <div class="form-row">
+               <div class="form-group">
+                 <label data-i18n="c_f_qty">Quantity</label>
+                 <input type="number" name="quantity" placeholder="1" min="1" />
+               </div>
+               <div class="form-group">
+                 <label data-i18n="c_f_budget">Budget (approx.)</label>
+                 <select name="budget">
+                   <option value="" data-i18n="c_f_bud_opt0">Select range...</option>
+                   <option data-i18n="c_f_bud_opt1">Under €20</option>
+                   <option>€20 – €50</option>
+                   <option>€50 – €150</option>
+                   <option>€150 – €500</option>
+                   <option data-i18n="c_f_bud_opt5">€500+</option>
+                 </select>
+               </div>
+             </div>
+
+             <div class="form-group">
+               <label data-i18n="c_f_msg">Describe Your Project *</label>
+               <textarea name="message" rows="5" data-i18n="c_f_msg_ph" placeholder="Tell us about your idea, dimensions, materials, deadlines, or anything else we should know..." required></textarea>
+             </div>
+
+             <!-- Updated File Input to link cleanly with FormSubmit engine -->
+             <div class="form-group">
+               <label data-i18n="c_f_file">Attach a File (optional)</label>
+               <div class="file-upload">
+                 <input type="file" id="fileInput" name="attachment" accept=".stl,.obj,.step,.iges,.3mf,.pdf,.jpg,.png" />
+                 <label for="fileInput" class="file-label" data-i18n="c_f_file_lbl">📎 Click to attach STL, OBJ, STEP, image or PDF</label>
+               </div>
+             </div>
+
+             <button type="submit" class="btn-primary btn-full" data-i18n="c_btn_submit">Send Message & Get a Free Quote</button>
+           </form>
+
 
           <div class="form-success" id="formSuccess" style="display:none">
             <div class="success-icon">✅</div>
