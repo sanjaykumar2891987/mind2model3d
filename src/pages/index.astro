@@ -880,40 +880,10 @@ const viewer = document.getElementById('main-3d-viewer');
       quoteSubmitBtn.textContent = 'Try Again';
     }
   });
-      // --- WhatsApp Interactive Chat Box Controller ---
-  // Replace with your international number without '+' or spaces (e.g., '36301234567')
-  const WA_PHONE_NUMBER = '36706428003';
 
-  const waToggleBtn = document.getElementById('wa-toggle-btn');
-  const waCloseBtn = document.getElementById('wa-close-btn');
-  const waChatBox = document.getElementById('wa-chat-box');
-  const waSendForm = document.getElementById('wa-send-form');
-  const waUserInput = document.getElementById('wa-user-input');
-
-  function toggleWhatsAppBox() {
-    const isHidden = waChatBox.classList.toggle('hidden');
-    if (!isHidden) {
-      setTimeout(() => waUserInput?.focus(), 100);
-    }
-  }
-
-  waToggleBtn?.addEventListener('click', toggleWhatsAppBox);
-  waCloseBtn?.addEventListener('click', toggleWhatsAppBox);
-
-  waSendForm?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const userText = waUserInput.value.trim();
-    const message = userText
-      ? `Hi Mind2Model3D! ${userText}`
-      : "Hi Mind2Model3D! I have a 3D model/STL file I'd like to get printed.";
-
-    const targetUrl = `https://wa.me/${WA_PHONE_NUMBER}?text=${encodeURIComponent(message)}`;
-    window.open(targetUrl, '_blank');
-    waChatBox.classList.add('hidden');
-    waUserInput.value = '';
-  });
       // ==========================================
     </script>
+
     <!-- Floating WhatsApp Widget -->
     <aside aria-label="WhatsApp Chat Widget" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
 
@@ -980,6 +950,54 @@ const viewer = document.getElementById('main-3d-viewer');
         </span>
       </button>
     </aside>
+<script is:inline>
+  (function initWhatsAppChat() {
+    function setup() {
+      // 1. Put your international number without '+' or spaces
+      const WA_PHONE_NUMBER = '36XXXXXXXXX';
 
+      const toggleBtn = document.getElementById('wa-toggle-btn');
+      const closeBtn = document.getElementById('wa-close-btn');
+      const chatBox = document.getElementById('wa-chat-box');
+      const sendForm = document.getElementById('wa-send-form');
+      const userInput = document.getElementById('wa-user-input');
+
+      if (!toggleBtn || !chatBox) return;
+
+      function toggleBox(e) {
+        if (e) e.preventDefault();
+        chatBox.classList.toggle('hidden');
+        if (!chatBox.classList.contains('hidden') && userInput) {
+          userInput.focus();
+        }
+      }
+
+      // Explicit click bindings
+      toggleBtn.onclick = toggleBox;
+      if (closeBtn) closeBtn.onclick = toggleBox;
+
+      if (sendForm) {
+        sendForm.onsubmit = function(e) {
+          e.preventDefault();
+          const text = userInput ? userInput.value.trim() : '';
+          const message = text
+            ? 'Hi Mind2Model3D! ' + text
+            : "Hi Mind2Model3D! I have a 3D model/STL file I'd like to get printed.";
+
+          const url = 'https://wa.me/' + WA_PHONE_NUMBER + '?text=' + encodeURIComponent(message);
+          window.open(url, '_blank');
+          chatBox.classList.add('hidden');
+          if (userInput) userInput.value = '';
+        };
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setup);
+    } else {
+      setup();
+    }
+  })();
+</script>
   </body>
 </html>
