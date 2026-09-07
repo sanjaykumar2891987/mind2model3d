@@ -71,16 +71,8 @@ if (fs.existsSync(portfolioDir)) {
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <!-- 1. Ensure 'is:inline' is explicitly present on the script tag -->
-  <script is:inline>
-    if (!sessionStorage.getItem("_swa") && document.referrer.indexOf(location.protocol + "//" + location.host) !== 0) {
-      fetch("https://counter.dev/track?" + new URLSearchParams({
-        id: "YOUR_COUNTER_DEV_USERNAME",
-        c: screen.width + "x" + screen.height,
-        r: document.referrer
-      })).catch(function() {});
-      sessionStorage.setItem("_swa", "1");
-    }
-  </script>
+  <!-- Official Counter.dev Tracker -->
+  <script is:inline src="https://cdn.counter.dev/script.js" data-id="b1dacbc3-7a7d-4c44-b196-71c0a18b739d" data-utcoffset="2"></script>
 
     <script is:inline src="https://cdn.tailwindcss.com"></script>
 
