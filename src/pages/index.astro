@@ -70,6 +70,17 @@ if (fs.existsSync(portfolioDir)) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+<script is:inline>
+    if (!sessionStorage.getItem("_swa") && document.referrer.indexOf(location.protocol + "//" + location.host) !== 0) {
+      fetch("https://counter.dev/track?" + new URLSearchParams({
+        id: "b1dacbc3-7a7d-4c44-b196-71c0a18b739d"
+        c: screen.width + "x" + screen.height,
+        r: document.referrer
+      })).catch(() => {});
+      sessionStorage.setItem("_swa", "1");
+    }
+  </script>
+
     <script is:inline src="https://cdn.tailwindcss.com"></script>
 
     <script is:inline type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
@@ -498,13 +509,22 @@ if (fs.existsSync(portfolioDir)) {
       </div>
     </div>
 
+<!-- Footer -->
     <footer class="py-12 border-t border-slate-800/80 text-center text-xs text-slate-500">
-      <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-7xl mx-auto px-6 space-y-4">
         <p>© 2026 Mind2Model3D. All rights reserved.</p>
-        <p class="mt-1 text-slate-600">Precision 3D Rapid Prototyping & Custom Digital Fabrication</p>
+        <p class="text-slate-600">Precision 3D Rapid Prototyping & Custom Digital Fabrication</p>
+
+        <!-- Live Visitor Hit Counter Badge -->
+        <div class="inline-flex items-center justify-center pt-2">
+          <img
+            src="https://hits.sh/mind2model3d.com.svg?style=flat-square&label=Visitors&color=f97316&labelColor=0f172a"
+            alt="Mind2Model3D Visitor Count"
+            class="rounded opacity-80 hover:opacity-100 transition-opacity"
+          />
+        </div>
       </div>
     </footer>
-
     <script is:inline>
       const translations = {
         en: {
