@@ -70,13 +70,14 @@ if (fs.existsSync(portfolioDir)) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<script is:inline>
+<!-- 1. Ensure 'is:inline' is explicitly present on the script tag -->
+  <script is:inline>
     if (!sessionStorage.getItem("_swa") && document.referrer.indexOf(location.protocol + "//" + location.host) !== 0) {
       fetch("https://counter.dev/track?" + new URLSearchParams({
-        id: "b1dacbc3-7a7d-4c44-b196-71c0a18b739d"
+        id: "YOUR_COUNTER_DEV_USERNAME",
         c: screen.width + "x" + screen.height,
         r: document.referrer
-      })).catch(() => {});
+      })).catch(function() {});
       sessionStorage.setItem("_swa", "1");
     }
   </script>
